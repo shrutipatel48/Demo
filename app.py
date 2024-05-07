@@ -50,11 +50,11 @@ def recommend(movie):
         recommended_movies.append(movies.iloc[i[0]].title)
     return recommended_movies,recommended_movie_posters
 
-movies_dict = pickle.load(open('C:/Users/HP/Downloads/movie_dict.pkl', 'rb'))
+movies_dict = pickle.load(open('./movie_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 
 
-similarity = pickle.load(open('C:/Users/HP/Downloads/similarity.pkl', 'rb'))
+similarity = pickle.load(open('./similarity.pkl', 'rb'))
 
 selected_movie_name = st.selectbox('How would you like to be contacted?', movies['title'].values)
 
